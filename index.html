@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.ico"/>
+    <title>Rbirdy Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="menu" id="menu">
+        <h1>Rbirdy</h1>
+        <button id="profile-button">Profile</button>
+        <button id="start-button">Start Game</button>
+        <button id="high-score-button">High Scores</button>
+        <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+    </div>
+    <img src="mybird.gif" alt="bird-img" class="bird" id="bird-1">
+    <div class="message" id="game-message">
+        <p></p>
+        <button id="restart-button" style="display:none;">Restart</button>
+    </div>
+    <div class="score">
+        <span class="score_title">Score: </span>
+        <span class="score_val">0</span>
+    </div>
+
+    <!-- Control buttons -->
+    <div class="controls">
+        <button id="left-button">Left</button>
+        <button id="up-button">Up</button>
+        <button id="down-button">Down</button>
+        <button id="right-button">Right</button>
+    </div>
+
+    <audio id="background-music" loop>
+        <source src="sounds effect/background.mp3" type="audio/mp3">
+    </audio>
+    
+    <!-- Profile Modal -->
+    <div id="profile-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal">&times;</span>
+            <h2>User Profile</h2>
+            <p><strong>Username:</strong> <span id="username">Player1</span></p>
+            <p><strong>High Score:</strong> <span id="profile-high-score">0</span></p>
+            <button id="close-profile-button">Close</button>
+        </div>
+    </div>
+</body>
+</html>
